@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Видео о бургерах | Burger.com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="video-page">
+    <header>
+      <div class="header-inner">
+        <a href="gbdgd.html" class="logo">Burger.com</a>
+        
+        <nav aria-label="Основная навигация">
+          <ul>
+            <li><a href="gbdgd.html">Главная</a></li>
+            <li><a href="рецепты.html">Рецепты</a></li>
+            <li><a href="Ингердионты.html">Ингредиенты</a></li>
+            <li><a href="о бургеров.html">О бургерах</a></li>
+            <li><a href="видео.html" aria-current="page">Видео</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-inner">
+      <section class="page-header">
+        <h1 class="page-title">Видео о бургерах</h1>
+        <div class="page-text">
+          <p>Видео с разными способами приготовления — от классической котлеты до хрустящей курицы.</p>
+        </div>
+      </section>
+
+      <section class="video-carousel" aria-label="Подборка видео">
+        <button class="video-carousel__button video-carousel__button--prev" type="button" aria-label="Предыдущие видео">
+          &#8249;
+        </button>
+        <div class="video-carousel__viewport">
+          <div class="video-carousel__track">
+            <article class="video-card">
+              <iframe src="https://www.youtube.com/embed/swqoIcuv79M?si=SaQtG0NqCKj9Spoi" title="Гамбургер (Heisenburger)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              <h2>Гамбургер (Heisenburger)</h2>
+            </article>
+            <article class="video-card">
+              <iframe src="https://www.youtube.com/embed/WdGH7HJPw-s?si=TNmuyvzQ5LmGugrU" title="Чизбургер (Cheeseburger)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              <h2>Чизбургер (Cheeseburger)</h2>
+            </article>
+            <article class="video-card">
+              <iframe src="https://www.youtube.com/embed/KqGzee2YlOc?si=thBDYydQa7pDBL_R" title="Бэкон-бургер (Bacon Burger)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+              <h2>Бэкон-бургер (Bacon Burger)</h2>
+            </article>
+            <article class="video-card">
+              <iframe src="https://www.youtube.com/embed/WdGH7HJPw-s?si=TNmuyvzQ5LmGugrU" title="Чикен-бургер (Chicken Burger)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <h2>Чикен-бургер (Chicken Burger)</h2>
+            </article>
+          </div>
+        </div>
+        <button class="video-carousel__button video-carousel__button--next" type="button" aria-label="Следующие видео">
+          &#8250;
+        </button>
+      </section>
+    </main>
+
+    <footer>
+      <div class="main-inner footer-inner">
+        <p>© 2026 Burger.com</p>
+        <div class="footer-links">
+          <a href="gbdgd.html">Главная</a>
+          <a href="Ингердионты.html">Ингредиенты</a>
+          <a href="о бургеров.html">О бургерах</a>
+          <a href="видео.html" aria-current="page">Видео</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const viewport = document.querySelector('.video-carousel__viewport');
+      const track = document.querySelector('.video-carousel__track');
+      const previousButton = document.querySelector('.video-carousel__button--prev');
+      const nextButton = document.querySelector('.video-carousel__button--next');
+
+      const getStep = () => {
+        const firstCard = track.querySelector('.video-card');
+        const trackStyles = window.getComputedStyle(track);
+        return firstCard.getBoundingClientRect().width + parseFloat(trackStyles.columnGap);
+      };
+
+      nextButton.addEventListener('click', () => {
+        const step = getStep();
+        const lastIndex = Math.ceil((viewport.scrollWidth - viewport.clientWidth) / step);
+        const currentIndex = Math.round(viewport.scrollLeft / step);
+        viewport.scrollTo({
+          left: currentIndex >= lastIndex ? 0 : (currentIndex + 1) * step,
+          behavior: 'instant'
+        });
+      });
+
+      previousButton.addEventListener('click', () => {
+        const step = getStep();
+        const lastIndex = Math.ceil((viewport.scrollWidth - viewport.clientWidth) / step);
+        const currentIndex = Math.round(viewport.scrollLeft / step);
+        viewport.scrollTo({
+          left: currentIndex <= 0 ? lastIndex * step : (currentIndex - 1) * step,
+          behavior: 'instant'
+        });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

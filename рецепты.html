@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Рецепты бургеров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="gbdgd.html" class="logo">Burger.com</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="gbdgd.html">Главная</a></li>
+          <li><a href="рецепты.html" aria-current="page">Рецепты</a></li>
+          <li><a href="Ингердионты.html">Ингредиенты</a></li>
+          <li><a href="о бургеров.html">О бургерах</a></li>
+          <li><a href="видео.html">Видео</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Поиск рецепта" aria-label="Поиск рецепта" />
+        <button type="button">Найти</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="main-inner hero-card">
+        <div class="hero-copy">
+          <h1>Рецепты бургеров</h1>
+          <p>Четыре домашних варианта с понятным списком продуктов и пошаговым приготовлением.</p>
+          <div class="cta-buttons">
+            <a href="#recipes" class="primary-btn">К рецептам</a>
+            <a href="Ингердионты.html" class="secondary-btn">Ингредиенты</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="%23FoodLover__%23Delicious__%23Yummy__%23Tasty__%23Foodstagram__%23FoodInspo__%23FoodIdeas__%23HomeCooking__%23EasyRecipes.Jpg" alt="Сочный бургер с сыром и свежими овощами" />
+        </div>
+      </div>
+    </section>
+
+    <section id="recipes" class="section">
+      <div class="main-inner">
+        <div class="section-heading">
+          <h2>Наши бургеры</h2>
+          <p>Откройте карточку, чтобы посмотреть продукты и шаги.</p>
+        </div>
+        <button class="random-recipe primary-btn" type="button">🎲 Случайный рецепт</button>
+
+        <div class="recipe-grid">
+          <article class="recipe-card" data-title="гамбургер heisenburger" data-text="классика с говяжьей котлетой маринованными огурцами луком кетчупом и горчицей">
+            <img src="%23FoodLover__%23Delicious__%23Yummy__%23Tasty__%23Foodstagram__%23FoodInspo__%23FoodIdeas__%23HomeCooking__%23EasyRecipes.Jpg" alt="Гамбургер" />
+            <div class="recipe-content">
+              <h3>Гамбургер</h3>
+              <p>Классический вкус с котлетой, маринованными огурцами и соусом.</p>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-title="чизбургер cheeseburger" data-text="тот же гамбургер но с расплавленным сыром чеддер">
+            <img src="загружено.Jpg" alt="Чизбургер" />
+            <div class="recipe-content">
+              <h3>Чизбургер</h3>
+              <p>Тот же гамбургер, но с расплавленным сыром и более насыщенным вкусом.</p>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-title="бэкон бургер bacon burger" data-text="сочная котлета с хрустящим беконом и соусом барбекю">
+            <img src="🍔 Burger King Bacon Cheeseburger!.Jpg" alt="Бэкон-бургер" />
+            <div class="recipe-content">
+              <h3>Бэкон-бургер</h3>
+              <p>Хрустящий бекон, сочная котлета и барбекю-соус.</p>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-title="чикен бургер chicken burger" data-text="куриное филе в панировке с салатом и майонезом">
+            <img src="загружено (1).Jpg" alt="чикен-бургер" />
+            <div class="recipe-content">
+              <h3>Чикен-бургер</h3>
+              <p>Куриное филе в хрустящей панировке, салат и майонез.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="recipeModal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" id="closeModal" class="close-btn" aria-label="Закрыть">×</button>
+      <img id="modalImage" src="" alt="" />
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="main-inner footer-inner">
+      <div>
+        <p>© 2026 Burger.com</p>
+      </div>
+      <div class="footer-links">
+        <a href="gbdgd.html">Главная</a>
+        <a href="Ингердионты.html">Ингредиенты</a>
+        <a href="о бургеров.html">О бургерах</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

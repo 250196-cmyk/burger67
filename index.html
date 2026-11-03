@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Burger.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <audio id="background-music" autoplay loop>
+    <source src="JoJo OP 2 –  Karaoke.m4a.mp4" type="audio/mpeg">
+</audio>
+  <header>
+    <div class="header-inner">
+      <div class="brand-block">
+        <div class="brand-copy">
+          <a href="index.html" class="logo">Burger.</a>
+          <a href="index.html" class="logoc">com</a>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="рецепты.html">Рецепты</a></li>
+          <li><a href="Ингердионты.html">Ингредиенты</a></li>
+          <li><a href="о бургеров.html">О бургерах</a></li>
+          <li><a href="видео.html">Видео</a></li>
+        </ul>
+      </nav>
+      <div class="search-box">
+        <input id="searchInput" type="text" placeholder="Поиск рецепта...">
+        <button type="button">Найти</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero parallax-section">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="main-inner hero-card hero-card--text">
+        <div class="hero-copy">
+          <span class="hero-eyebrow">BURGER.COM · ВКУС С ХАРАКТЕРОМ</span>
+          <h1>СОБЕРИ СВОЙ ИДЕАЛЬНЫЙ БУРГЕР</h1>
+          <p>
+            Яркие сочетания, сочные котлеты и рецепты с энергией главной сцены.
+          </p>
+          <div class="cta-buttons">
+            <a href="#recipes" class="primary-btn">Все рецепты</a>
+            <a href="Ингердионты.html" class="secondary-btn">Ингредиенты</a>
+          </div>
+          <div class="hero-actions">
+            <button class="awakening-button" type="button" aria-pressed="false">Пробуди свою энергию</button>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="%23FoodLover__%23Delicious__%23Yummy__%23Tasty__%23Foodstagram__%23FoodInspo__%23FoodIdeas__%23HomeCooking__%23EasyRecipes.Jpg" alt="Аппетитный бургер с сочной котлетой и свежими ингредиентами">
+        </div>
+      </div>
+    </section>
+
+    <section class="crew-section section" aria-labelledby="crewTitle">
+      <div class="main-inner">
+        <div class="crew-heading">
+          <div>
+            <span class="hero-eyebrow">ОРИГИНАЛЬНЫЕ ГЕРОИ BURGER.COM</span>
+            <h2 id="crewTitle">Команда большого вкуса</h2>
+            <p>Выбери героя, чтобы узнать его историю и фирменную способность.</p>
+          </div>
+          <div class="crew-switch" role="group" aria-label="Выбор команды">
+            <button type="button" data-crew-filter="crew" aria-pressed="true">Команда</button>
+            <button type="button" data-crew-filter="rival" aria-pressed="false">Соперник</button>
+          </div>
+        </div>
+        <div class="hero-roster">
+          <button class="hero-character" type="button" data-faction="crew" data-power="Искровой рывок" data-description="Неутомимая шеф-повар и капитан команды. Она превращает точный тайминг и жар гриля в молниеносную подачу." aria-haspopup="dialog">
+            <span class="hero-avatar hero-avatar--volt"><img class="hero-avatar__image" src="assets/hero-01.jpg" alt=""><i></i></span>
+            <span class="hero-character__number">ГЕРОЙ 01 · КАПИТАН</span>
+            <span class="hero-character__name"></span>
+            <span class="hero-character__power">Искровой рывок</span>
+          </button>
+          <button class="hero-character" type="button" data-faction="crew" data-power="Стальная корочка" data-description="Мастер огня и хрустящей корочки. Умеет сохранять сочность внутри и добиваться идеального жара снаружи." aria-haspopup="dialog">
+            <span class="hero-avatar hero-avatar--copper"><img class="hero-avatar__image" src="assets/hero-02.jpg" alt=""><i></i></span>
+            <span class="hero-character__number">ГЕРОЙ 02 · МАСТЕР ЖАРА</span>
+            <span class="hero-character__name"></span>
+            <span class="hero-character__power">Стальная корочка</span>
+          </button>
+          <button class="hero-character" type="button" data-faction="crew" data-power="Соусная радуга" data-description="Экспериментатор с безупречным вкусом. Соединяет неожиданные соусы так, чтобы каждый ингредиент звучал ярче." aria-haspopup="dialog">
+            <span class="hero-avatar hero-avatar--spectrum"><img class="hero-avatar__image" src="assets/hero-03.jpg" alt=""><i></i></span>
+            <span class="hero-character__number">ГЕРОЙ 03 · АЛХИМИК ВКУСА</span>
+            <span class="hero-character__name"></span>
+            <span class="hero-character__power">Соусная радуга</span>
+          </button>
+          <button class="hero-character" type="button" data-faction="crew" data-power="Ледяной баланс" data-description="Спокойный стратег, который отвечает за свежесть и идеальный баланс. Его рецепты никогда не перегружают вкус." aria-haspopup="dialog">
+            <span class="hero-avatar hero-avatar--north"><img class="hero-avatar__image" src="assets/hero-04.jpg" alt=""><i></i></span>
+            <span class="hero-character__number">ГЕРОЙ 04 · СТРАТЕГ</span>
+            <span class="hero-character__name"></span>
+            <span class="hero-character__power">Ледяной баланс</span>
+          </button>
+          <button class="hero-character" type="button" data-faction="crew" data-power="Теневой маринад" data-description="Ночная исследовательница специй. Раскрывает глубокие ароматы и добавляет рецептам загадочный характер." aria-haspopup="dialog">
+            <span class="hero-avatar hero-avatar--nox"><img class="hero-avatar__image" src="assets/hero-05.jpg" alt=""><i></i></span>
+            <span class="hero-character__number">ГЕРОЙ 05 · ИССЛЕДОВАТЕЛЬ</span>
+            <span class="hero-character__name"></span>
+            <span class="hero-character__power">Теневой маринад</span>
+          </button>
+          <button class="hero-character" type="button" data-faction="crew" data-power="Ритм гриля" data-description="Душа команды и виртуоз быстрой сборки. Чувствует ритм кухни и подаёт горячие бургеры один за другим." aria-haspopup="dialog">
+            <span class="hero-avatar hero-avatar--pulse"><img class="hero-avatar__image" src="assets/hero-06.jpg" alt=""><i></i></span>
+            <span class="hero-character__number">ГЕРОЙ 06 · ВИРТУОЗ</span>
+            <span class="hero-character__name"></span>
+            <span class="hero-character__power">Ритм гриля</span>
+          </button>
+          <button class="hero-character hero-character--rival" type="button" data-faction="rival" data-power="The World" data-description="Загадочный соперник, который бросает команде вызов и замедляет кухню до полной тишины, чтобы проверить точность каждого движения." aria-haspopup="dialog" hidden>
+            <span class="hero-avatar hero-avatar--rival"><img class="hero-avatar__image" src="assets/hero-07.jpg" alt=""><i></i></span>
+            <span class="hero-character__number">Rival · time stop</span>
+            <span class="hero-character__name"></span>
+            <span class="hero-character__power">The World</span>
+          </button>
+        </div>
+  
+    </section>
+
+    <section id="recipes" class="section">
+      <div class="main-inner">
+        <div class="section-heading">
+          <h2>Популярные бургеры</h2>
+          <p>Выберите рецепт, а детали и список продуктов откройте в карточке.</p>
+        </div>
+        <button class="random-recipe primary-btn" type="button">🎲 Случайный рецепт</button>
+
+        <div class="recipe-grid">
+          <article class="recipe-card" data-title="Гамбургер" data-text="Классика с говяжьей котлетой, маринованными огурцами, луком, кетчупом и горчицей.">
+            <img src="%23FoodLover__%23Delicious__%23Yummy__%23Tasty__%23Foodstagram__%23FoodInspo__%23FoodIdeas__%23HomeCooking__%23EasyRecipes.Jpg" alt="Гамбургер">
+            <div class="recipe-content">
+              <h3>Гамбургер</h3>
+              <p>Классический вкус с котлетой, маринованными огурцами и соусом.</p>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-title="Чизбургер" data-text="Тот же бургер, но с расплавленным ломтиком сыра и мягкой булочкой.">
+            <img src="загружено.Jpg" alt="Чизбургер">
+            <div class="recipe-content">
+              <h3>Чизбургер</h3>
+              <p>Тот же вкус, но с расплавленным сыром и более насыщенным вкусом.</p>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-title="Бэкон-бургер" data-text="Сочная котлета, бекон и барбекю соус для сладко-солёного вкуса.">
+            <img src="🍔 Burger King Bacon Cheeseburger!.Jpg" alt="Бэкон-бургер">
+            <div class="recipe-content">
+              <h3>Бэкон-бургер</h3>
+              <p>Хрустящий бекон, сочная котлета и барбекю-соус.</p>
+            </div>
+          </article>
+
+          <article class="recipe-card" data-title="Чикен бургер" data-text="Куриное филе в панировке с салатом и соусом вместо говядины.">
+            <img src="загружено (1).Jpg" alt="Чикен бургер">
+            <div class="recipe-content">
+              <h3>Чикен бургер</h3>
+              <p>Куриное филе в хрустящей панировке с сочным вкусом.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="main-inner">
+      <section class="subscription-form" aria-labelledby="subscriptionTitle">
+        <h2 id="subscriptionTitle">Подписка на рассылку</h2>
+        <form>
+          <label for="subscriptionEmail">Электронная почта:</label>
+          <input id="subscriptionEmail" type="email" placeholder="Введите адрес электронной почты" required>
+          <button type="submit">Подписаться</button>
+        </form>
+      </section>
+
+      <div class="footer-container">
+        <div class="location-block">
+          <div class="location-map">
+            <iframe
+              src="https://www.google.com/maps?q=Москва%2C%20ул.%20Спиридоновка%2C%20д.%2025%2F20с1&z=15&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Карта с местоположением Burger.com"
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <address class="contact-info">
+            <h2>Контактная информация</h2>
+            <p>Телефон: <a href="tel:+77759974252">+7 (775) 997-42-52</a></p>
+            <p>Адрес: Москва, ул. Спиридоновка, д. 25/20с1</p>
+          </address>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">© 2026 Burger</p>
+          <p class="copyright">com</p>
+
+          <nav class="social-links" aria-label="Социальные сети">
+            <a class="social-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.2 3.6-6.2 3.6Z" /></svg>
+              <span>YouTube</span>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" /></svg>
+              <span>Instagram</span>
+            </a>
+            <a class="social-link" href="https://web.telegram.org/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m22.4 3.2-3.4 17c-.3 1.2-1 1.5-2 .9l-5.5-4-2.7 2.6c-.3.3-.5.5-1 .5l.4-5.6L18.4 6c.4-.4-.1-.6-.6-.3L5.2 13.8l-5.4-1.7c-1.2-.4-1.2-1.2.3-1.8L21.2 2c1-.4 1.9.2 1.2 1.2ZM9.8 14.8l-.3 3.2 3-2.9-2.7-.3Z" /></svg>
+              <span>Telegram</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-button" href="https://wa.me/77759974252" target="_blank" rel="noopener noreferrer" aria-label="Написать в WhatsApp" title="Написать в WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16 3.2A12.5 12.5 0 0 0 5.3 22.2L3.7 28l6-1.6A12.5 12.5 0 1 0 16 3.2Zm0 22.8c-2 0-4-.5-5.7-1.6l-.4-.2-3.5.9.9-3.4-.3-.5A10 10 0 1 1 16 26Zm5.5-7.5c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.2-.7-1.7-1-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.8-.7 2.1-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z" />
+    </svg>
+  </a>
+  <button id="scrollToTopButton" type="button" aria-label="Наверх" hidden>↑</button>
+
+  <div class="modal" id="recipeModal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button type="button" id="closeModal" class="close-btn" aria-label="Закрыть">×</button>
+      <img id="modalImage" src="" alt="" />
+      <h3 id="modalTitle"></h3>
+      <p id="modalText"></p>
+    </div>
+  </div>
+
+  <div class="modal hero-modal" id="heroModal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="heroModalTitle">
+      <button type="button" id="closeHeroModal" class="close-btn" aria-label="Закрыть">×</button>
+      <span class="hero-eyebrow">ДОСЬЕ ГЕРОЯ</span>
+      <h2 id="heroModalTitle"></h2>
+      <p class="hero-modal__power" id="heroModalPower"></p>
+      <p id="heroModalDescription"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
